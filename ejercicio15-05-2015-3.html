@@ -17,7 +17,7 @@
   </head>
   <body>
     <section>
-      <form name="miformulario" id="miformulario" method="get">
+      <form name="miformulario" id="miformulario" method="post">
 
 		<p class="etiqueta">Nombre:</p>
 		<p class="campo"><input type="text" name="minombre" id="minombre" required></p>
@@ -31,8 +31,13 @@
 		<p class="etiqueta">Url:</p> 
 		<p class="campo"><input type="url" name="miurl" id="miurl" required></p>
 
+		<datalist id="informacion">
+			<option value="0426-5450845" label="Teléfono 1">
+			<option value="0424-3024456" label="Teléfono 2">
+		</datalist>
+		
 		<p class="etiqueta">Teléfono:</p> 
-		<p class="campo"><input type="tel" name="mitelefono" id="mitelefono" required></p>
+		<p class="campo"><input type="tel" name="mitelefono" id="mitelefono" list="informacion" required></p>
 
 		<p class="etiqueta">Número:</p> 
 		<p class="campo"><input type="number" name="minumero" id="minumero" min="10" max="100" step="5" required></p>
@@ -61,10 +66,9 @@
 		<p class="etiqueta">Color:</p> 
 		<p class="campo"><input type="color" name="micolor" id="micolor" required></p>
 			
-
 		<p class="etiqueta">Código postal</p>
-		<p class="campo"><input pattern="[0-9]{5}" name="codigopostal" id="codigopostal" title="Por favor inserte los 5 números de su código postal"></p>		
-
+		<p class="campo"><input pattern="[0-9]{5}" name="codigopostal" id="codigopostal" title="Por favor inserte los 5 números de su código postal"></p>				
+				
         <p class="campo"><input type="submit" value="enviar"></p>
 		
       </form>
