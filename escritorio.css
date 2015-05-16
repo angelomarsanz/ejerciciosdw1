@@ -137,9 +137,16 @@ padding: 1%;
 width: 96%;
 }
 
+.etiqueta
+{
+margin: 0% 1%;
+float: left;
+width: 98%;
+}
+
 .campo
 {
-margin: 1% 1% 0% 1%;
+margin: 0% 1% 1% 1%;
 float: left;
 width: 98%;
 }
