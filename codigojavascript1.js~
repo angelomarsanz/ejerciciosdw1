@@ -1,0 +1,13 @@
+function hacerclic()
+	{
+	document.getElementsByTagName('p')[0].onclick=mostraralerta;
+	}
+function mostraralerta()
+	{
+	alert('Hizo clic!');
+	}
+	window.onload=hacerclic
+
+
+
+				

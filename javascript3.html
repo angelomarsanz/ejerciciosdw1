@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Este texto es es título del documento</title>
+		<script>
+			function mostraralerta()
+				{
+				alert('Hizo clic!');
+				}
+			function hacerclic()
+				{
+				document.getElementsByTagName('p')[0].onclick=mostraralerta;
+				}
+			window.onload=hacerclic
+		</script>
+	</head>
+	<body>
+		<div id="principal">
+			<p>Hacer clic</p>
+			<p>No puede hacer clic</p>
+		</div>
+	</body>
+</html>
+
+
+
+				
