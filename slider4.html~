@@ -4,7 +4,7 @@
             <title>Slider CSS - An automatic Slider only with CSS</title>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link href="./style2.css" rel="stylesheet" type="text/css" />
+            <link href="./style3.css" rel="stylesheet" type="text/css" />
         </head>
         <body>
             <div id="page">
@@ -24,6 +24,11 @@
                             <div class="slider-element">
                                 <article>
 					<img class="modeloimg" src="parrilla.jpg">					    
+                                </article>                            
+                            </div>
+                            <div class="slider-element">
+                                <article>
+					<img class="modeloimg" src="sarten.jpg">					    
                                 </article>                            
                             </div>
                         </div>

@@ -26,6 +26,11 @@
 					<img class="modeloimg" src="parrilla.jpg">					    
                                 </article>                            
                             </div>
+                            <div class="slider-element">
+                                <article>
+					<img class="modeloimg" src="sarten.jpg">					    
+                                </article>                            
+                            </div>
                         </div>
                     </div>                    
                 </section>            
