@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Este es el título del documento</title>
+	</head>
+	<body>
+		<div>
+			<img id="slideshow" src="manos.jpg" />
+		</div>
+	</body>
+<script type="text/javascript">
+ 
+var myimages=[
+    "manos.jpg",
+    "manos2.jpg",
+    "manos3.jpg",
+    "manos4.jpg",
+    "manos5.jpg",
+]
+ 
+var slideshow=document.getElementById("slideshow")
+var nextslideindex=0
+ 
+function rotateimage(e){
+    var evt=window.event || e //equalize event object
+    var delta=evt.detail? evt.detail*(-120) : evt.wheelDelta //delta returns +120 when wheel is scrolled up, -120 when scrolled down
+    nextslideindex=(delta<=-120)? nextslideindex+1 : nextslideindex-1 //move image index forward or back, depending on whether wheel is scrolled down or up
+    nextslideindex=(nextslideindex<0)? myimages.length-1 : (nextslideindex>myimages.length-1)? 0 : nextslideindex //wrap image index around when it goes beyond lower and upper boundaries
+    slideshow.src=myimages[nextslideindex]
+    if (evt.preventDefault) //disable default wheel action of scrolling page
+        evt.preventDefault()
+    else
+        return false
+ 
+}
+ 
+var mousewheelevt=(/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
+ 
+if (slideshow.attachEvent) //if IE (and Opera depending on user setting)
+    slideshow.attachEvent("on"+mousewheelevt, rotateimage)
+else if (slideshow.addEventListener) //WC3 browsers
+    slideshow.addEventListener(mousewheelevt, rotateimage, false)
+ 
+ 
+</script>
+</html>
+
